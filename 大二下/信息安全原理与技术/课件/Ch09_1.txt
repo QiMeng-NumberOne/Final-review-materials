@@ -1,0 +1,105 @@
+=== Slide 1 (ppt/slides/slide1.xml) ===
+Security in Computing,Fifth EditionChapter 9: Privacy1
+
+=== Slide 2 (ppt/slides/slide10.xml) ===
+无痕窗口
+
+=== Slide 3 (ppt/slides/slide11.xml) ===
+国内个人信息安全事件2014年3月，国内知名旅游网——携程旅行网被报道，其支付日志存在漏洞，用户银行卡信息可被黑客任意读取。2017年暗网市场知名供应商双旗（DoubleFlag）抛售从数家中国互联网巨头盗取的大量数据，数据条数达到10亿以上。这些数据来源于网易及其下属公司、腾讯控股、TOM集团、新浪集团、搜狐公司等。11
+
+=== Slide 4 (ppt/slides/slide12.xml) ===
+SpywareSpyware is code designed to spy on a user, collecting dataGeneral spyware:Advertising applications, identity theftHijackers:Hijack existing programs and use them for different purposes, such as reconfiguring file sharing software to share sensitive informationAdwareDisplays selected advertisements in pop-up windows or the main browser windowOften installed in a misleading way as part of other software packages12
+
+=== Slide 5 (ppt/slides/slide13.xml) ===
+Fair Information PracticesData should be obtainedlawfully and fairlyData should be relevant to theirpurposes, accurate, complete, and up to dateThe purposes for which data will be used should beidentifiedand that datadestroyedif no longer necessary for that purposeUse for purposes other than those specified isauthorizedonly with consent of data subject or by authority of lawProcedures toguardagainst loss, corruption, destruction, or misuse of data should be establishedIt should be possible to acquire information about the collection, storage, and use of personal data systemsThe data subjects normally have a right to access and challenge data relating to themA data controller should be designated andaccountablefor complying with the measures to effect these principles13
+
+=== Slide 6 (ppt/slides/slide14.xml) ===
+U.S. Privacy LawsThe 1974 Privacy Act embodies most of the principles above but applies only to data collected by the U.S. governmentOther federal privacy laws:HIPAA (healthcare data)GLBA (financial data)COPPA (children’s web access)FERPA (student records)State privacy law varies widely14
+
+=== Slide 7 (ppt/slides/slide15.xml) ===
+Non-U.S. Privacy PrinciplesEuropean Privacy Directive (1995)Applies the Ware Committee’s principles to governments and businessesAlso provides for extra protection for sensitive data, strong limits on data transfer, and independent oversight to ensure complianceA list of other nations’ privacy laws can be found athttp://www.informationshield.com/intprivacylaws.html15《通用数据保护条例》（General Data Protection Regulation，简称GDPR）为欧洲联盟的条例
+
+=== Slide 8 (ppt/slides/slide16.xml) ===
+中国隐私保护相关法律1、《宪法》规定，第三十八条　中华人民共和国公民的人格尊严不受侵犯。2、《民法通则》规定，第一百零一条 公民、法人享有名誉权，公民的人格尊严受法律保护，禁止用侮辱、诽谤等方式损害公民、法人的名誉。【人格权就包括隐私权】3、《治安管理处罚法》第四十二条　有下列行为之一的，处五日以下拘留或者五百元以下罚款；情节较重的，处五日以上十日以下拘留，可以并处五百元以下罚款：（二）公然侮辱他人或者捏造事实诽谤他人的；（六）偷窥、偷拍、窃听、散布他人隐私的。4、《侵权责任法》规定， 第二条 侵害民事权益，应当依照本法承担侵权责任。本法所称民事权益，包括生命权、健康权、姓名权、名誉权、荣誉权、肖像权、隐私权、婚姻自主权、监护权、所有权、用益物权、担保物权、著作权、专利权、商标专用权、发现权、股权、继承权等人身、财产权益。5、《民事诉讼法》规定第一百三十四条　人民法院审理民事案件，除涉及国家秘密、个人隐私或者法律另有规定的以外，应当公开进行。第一百五十六条　公众可以查阅发生法律效力的判决书、裁定书，但涉及国家秘密、商业秘密和个人隐私的内容除外。6、《刑事诉讼法》规定， 第五十二条　人民法院、人民检察院和公安机关有权向有关单位和个人收集、调取证据。有关单位和个人应当如实提供证据。......对涉及国家秘密、商业秘密、个人隐私的证据，应当保密。第一百五十条 采取技术侦查措施，必须严格按照批准的措施种类、适用对象和期限执行。侦查人员对采取技术侦查措施过程中知悉的国家秘密、商业秘密和个人隐私，应当保密；第一百八十三条人民法院审判第一审案件应当公开进行。但是有关国家秘密或者个人隐私的案件，不公开审理；涉及商业秘密的案件，当事人申请不公开审理的，可以不公开审理。16
+
+=== Slide 9 (ppt/slides/slide17.xml) ===
+PrivacyEnhancingTechnologiesMethodsforprotectingpersonaldataMostCommon/Successful?TLS.Comeswithbrowser.Alsousedforprotectingemail.Itjustworks,withoutyouhavingtoconfigureanything.ProtectscontentsofcommunicationfrompassiveeavesdroppersandactiveMITMattacks.Toolsthatprovideconfidentialityalsoprovidesomeprivacy.Youprobablydon'twantyourlandlordorcoﬀeeshopcustomerstolearnthingsaboutyou.
+
+=== Slide 10 (ppt/slides/slide18.xml) ===
+EncouragingHTTPSAdoption2014:HTTPSusedasapagerankindicatorEarly2018:MozillaannouncesthatnewfeatureswillrequireHTTPSLate2018:NewChromeHTTPSindicators(HTTPS)(HTTP)
+
+=== Slide 11 (ppt/slides/slide19.xml) ===
+ChromePageLoadsoverHTTPSGoogleTransparencyReport
+
+=== Slide 12 (ppt/slides/slide2.xml) ===
+Chapter 9 ObjectivesDefine privacy and fundamental computer-related privacy challengesPrivacy principles and lawsPrivacy precautions for web surfingSpywareEmail privacyPrivacy concerns in emerging technologies2
+
+=== Slide 13 (ppt/slides/slide20.xml) ===
+0%25%50%20132015201620172019GmailInboundGmailOutboundGmailrollsoutindicatorsToday,92-93%ofmessagesareencrypted100%YahooandHotmaildeploySTARTTLS75%STARTTLSasseenbyGmail
+
+=== Slide 14 (ppt/slides/slide21.xml) ===
+ProtectingMetadataTLSonlyprotectscontentagainstthirdparty.Whatdoesn’tTLSprotectagainst?Wemaywanttoprotectmetadata:Whoisvisitingwhatwebsites?Whoissendingmessagestowhom?Wemaywanttohidetheexistenceofthemessage(maybesendinganencryptedmessageatallisgoingtocauseyouproblems)
+
+=== Slide 15 (ppt/slides/slide22.xml) ===
+WhatisAnonymity?Anonymity(“withoutname’’)meansthatapersonisnotidentifiablewithinasetofsubjectsUnlinkabilityofactionandidentityForexample,senderandhisemailarenomorerelatedafteradversary’sobservationsthantheywerebeforeWho talkstowhomUnobservabilityAdversarycannottellwhethersomeoneisusingaparticularsystemand/orprotocol
+
+=== Slide 16 (ppt/slides/slide23.xml) ===
+WhyAnonymity?Toprotectprivacy:AvoidtrackingbyadvertisingcompaniesViewingsensitivecontentInformationonmedicalconditionsAdviceonbankruptcyProtectionfromprosecutionNoteverycountryguaranteesfreespeech
+
+=== Slide 17 (ppt/slides/slide24.xml) ===
+AnonymityisHardInternetanonymityishard…Righttherein everypacket isthe sourceand destinationIPaddressISPsstorecommunicationsrecords-LawenforcementcansubpoenatheserecordsWirelesstraﬃccanbetriviallyinterceptedTier1ASsandIXPsarecompromised—NSA,GCHQ,“FiveEyes”
+
+=== Slide 18 (ppt/slides/slide25.xml) ===
+AnonymityDiﬃcultifnotimpossibletoachieveonyourownYougenerallyneedhelp.Stateof thearttechnique:Asksomeone elsetosenditforyou
+
+=== Slide 19 (ppt/slides/slide26.xml) ===
+PseudonymUse case: social security systemdifferent entities maintain data of citizenseventually data needs to be exchanged orcorrelated
+
+=== Slide 20 (ppt/slides/slide27.xml) ===
+PseudonymGlobally Unique Identifieruser data is associated with globally unique identifier–e.g., social security number, insurance IDdifferent entities can easily share & link related data records
+
+=== Slide 21 (ppt/slides/slide28.xml) ===
+PseudonymLocal Pseudonyms &TrustedConvertercentral converter derives independent server-local identifiers from uniqueidentiferuser data is associated with (unlinkable) server-local identifiersaka “pseudonyms”only converter can link  & convert pseudonyms→ central hub for data exchange
+
+=== Slide 22 (ppt/slides/slide29.xml) ===
+PseudonymCertifying a pseudonym together with public key instead of real identityIs a pseudonym enough for a digital signature scheme?NoLinkabilityShort-term usage
+
+=== Slide 24 (ppt/slides/slide30.xml) ===
+Confidential ComputingConfidential computing isa technology that isolates sensitive data in a protected environment during processingThe contents of data being processed, and the techniques that are used to process areaccessible only to authorizedprogramming code, and areinvisible and unknowableto anything or anyone else30
+
+=== Slide 25 (ppt/slides/slide31.xml) ===
+Confidential Computing集中计算模式下实现“数据可用不可见”通过隐私泄露代价和概率的计算模型来求得所接受的计算方法与保护结果在协同计算模式下实现“数据可用不可见”典型技术如姚期智院士提出的安全多方计算（Secure Multiparty Computation）允许多个数据所有者在互不信任的情况下进行协同计算，然后输出计算结果。常见如混淆电路、不经意传输，同态加密等协同计算技术。在协同计算模式下实现“数据不动程序动”数据不流通的情况下需要算法程序流动，如联邦学习——将集体学习算法程序分散到各数据拥有方，然后再将训练参数传回来以实现数据利用31
+
+=== Slide 27 (ppt/slides/slide33.xml) ===
+SummaryWhat data is considered private is subjectivePrivacy laws vary widely by jurisdictionCookies and web bugs track user behavior across websitesSpyware can be used to track behavior for targeted advertising or for much more nefarious purposesEmail has little privacy protection by defaultEmerging technologies are fraught with privacy uncertainties, including both technological and legal issues33
+
+=== Slide 28 (ppt/slides/slide34.xml) ===
+TorisasuccessfulprivacyenhancingtechnologythatworksatthetransportlayerMillionsofactiveusers.Normally,aTCPconnection revealsyourIPaddressTorallowsTCPconnectionswithoutrevealingyourIP
+
+=== Slide 29 (ppt/slides/slide35.xml) ===
+Toroperatesbytunnelingtraﬃcthroughmultiple“onionrouters”usingpublickeycryptographyTor(“TheOnionRouter”)
+
+=== Slide 30 (ppt/slides/slide36.xml) ===
+Entrynode:knowsAliceisusingTor,andidentityofmiddlenode,butnotdestinationExit node:knowssomeToruser isconnectingtodestination,butnotwhichuserDestination:knowsaToruserisconnectingtoitviatheexitnodeTordoesnotprovideencryptionbetweenexitanddestination(useHTTPS!)WhoKnowsWhat?
+
+=== Slide 31 (ppt/slides/slide37.xml) ===
+TorprovidesforanonymityinTCPconnectionsovertheInternet,bothunlinkably(long-term)andlinkably(short-term).Whatdoesthismean?There’snolong-termidentifierforaToruserIfawebservergetsaconnectionfromTortoday,andanotheronetomorrow,itwon’tbeabletotellwhetherthosearefromthesamepersonButtwoconnectionsinquicksuccessionfromthesameTornodearemorelikelytoinfactbefromthesamepersonDoesTorProvideAnonymity?
+
+=== Slide 32 (ppt/slides/slide38.xml) ===
+Performance:messagebouncesaroundalot(canbeslow)Attack:governmentcancoerceserveroperatesinonecountryDefense:usemixserversindiﬀerentlegaljurisdictionsAttack:adversaryoperatesallofthemixesDefense:havelotsofmixservers(Torhas~7,000onionrouterstoday).Usediverseset.Attack:adversaryobserveswhenAlicesendsandwhenBobreceives,linksthetwotogetherAsidechannelattack–exploitstiminginformationDefenses:padmessages,introducesignificantdelaysTordoestheformer,butnotesthatit’snotenoughfordefenseTorChallenges
+
+=== Slide 33 (ppt/slides/slide39.xml) ===
+Howdoyouprotectagainstanadversarycreatingalargenumberofonionroutersandperformingtimingobservationatentranceandexits?Limittheserversusedforinitialconnectiontoasubsetoftrustednodes:Havelongandconsistentuptimes…Havehighbandwidth…AremanuallyvettedbytheTorcommunityTorclientselects3guardrelaysandusesthemfor3monthsGuardRelays
+
+=== Slide 34 (ppt/slides/slide4.xml) ===
+What Is Privacy?Privacy is control over your own information. Freedom from intrusion into personal mattersPrivacy is a person’s right or expectation to control the disclosure of his/her personalinformation, including activity metadataTypesof data many people consider private:IdentityFinancesHealthBiometricsPrivileged communicationsLocation dataSubject: person or entity being described by the dataOwner: person or entity that holds the data4
+
+=== Slide 35 (ppt/slides/slide40.xml) ===
+Relaysmustself-electtobeexitnodes.Why?LegalproblemsIfsomeonedoessomethingmaliciousorillegalusingTorandthepolicetracethetraﬃc,thetraceleadstotheexitnodeExitNodes
+
+=== Slide 36 (ppt/slides/slide41.xml) ===
+Asdescribed,Torprotectstheidentityoftheclient,butnottheserverWhatifwewanttorunananonymousservice?awebsite,wherenobodyknowstheIPaddress?TorsupportsHiddenServices…AllowsyoutorunaserverwithoutdisclosingtheIP orDNSnameManyhiddenservicesDuckDuckGo,TorChat,WikileaksTorHiddenServices
+
+=== Slide 37 (ppt/slides/slide5.xml) ===
+Computer-Related Privacy ProblemsData collectionAdvances in computer storage make it possible to hold and manipulate huge numbers of records, and those advances continue to evolveNotice and consentNotice of collection and consent to allow collection of data are foundations of privacy, but with modern data collection, it is often impossible to know what is being collectedControl and ownership of dataOnce a user consents to provide data, the data is out of that user’s control. It may be held indefinitely or shared with other entities.5
+

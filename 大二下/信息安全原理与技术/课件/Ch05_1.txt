@@ -1,0 +1,99 @@
+=== Slide 1 (ppt/slides/slide1.xml) ===
+Security in Computing,Fifth EditionChapter 4: Operating Systems1是一组主管并控制计算机操作、运用和运行硬件、软件资源和提供公共服务来组织用户交互的相互关联的系统软件程序
+
+=== Slide 2 (ppt/slides/slide10.xml) ===
+Base/Bounds Registers10基址寄存器
+
+=== Slide 3 (ppt/slides/slide11.xml) ===
+Two Pairs of Base/Bounds Registers11程序切换地址变化：上F文切换（context switch）增加范围寄存器，标识每个进程准确内存范围问题：用户可能不慎将数据存储在指令存储区（Buffer overflow两对基址／范围寄存器： 一个寄存拇用于存储程序、另一个存储数据—分离
+
+=== Slide 4 (ppt/slides/slide12.xml) ===
+Tagged Architecture12FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.另一个问题：基址/范围寄存器：连续性——完全共享或者不共享如何保护部分数据而不是全部数据？——额外的比特用来表示该单元的访问权限，这样的结构称为标记结构
+
+=== Slide 5 (ppt/slides/slide13.xml) ===
+Segmentation13A program is dividedintoseparate, logical pieces(e.g., an array, a procedure)Each segment has its own set of access rights. The operating system maintains atable of each segmentand its true memory address, and it translates calls to each segment using that table (shown on next slide). Advantages:The operating system can move segments around as necessary, which is very helpful as segmentsgrow and shrinkSegments can beremoved from memoryif they aren’t being used currentlyEvery legitimate address reference must pass through the OS, providing an opportunity for access controlfine-grainedaccess control and share
+
+=== Slide 6 (ppt/slides/slide14.xml) ===
+Segmentation14FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 7 (ppt/slides/slide15.xml) ===
+Segment Address Translation15FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 8 (ppt/slides/slide16.xml) ===
+Paging16FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.fixed-size fragments (pages)
+
+=== Slide 9 (ppt/slides/slide17.xml) ===
+Paged Segmentation17
+
+=== Slide 10 (ppt/slides/slide18.xml) ===
+18
+
+=== Slide 11 (ppt/slides/slide19.xml) ===
+Principles of Secure OS DesignSimplicity of designOSs are inherently complex, and any unnecessary complexity only makes them harder to understand and secureLayered designEnables layered trustLayered trustLayering is both a way to keep a design logical and understandable and a way to limit riskExample: very tight access controls on critical OS functions, fewer access controls on important noncritical functions, and few if any access controls on functions that aren’t important to the OS19FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 12 (ppt/slides/slide2.xml) ===
+Chapter 4 ObjectivesBasicsecurity functionsprovided by operating systemsSystem resources that require operating system protectionOperating systemdesign principlesHow operating systems control access to resourcesThe history of trusted computing2FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 13 (ppt/slides/slide20.xml) ===
+OS Layered Design20防御恶意代码的一个有效方法是在它们存入磁盘或调入内存之前就进行预防和阻止
+
+=== Slide 14 (ppt/slides/slide21.xml) ===
+Functions Spanning Layers21FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.The first access control stepis entityauthentication内核、分离、隔离和层次结构——很多可信系统模型的基础
+
+=== Slide 15 (ppt/slides/slide22.xml) ===
+Functions Spanning Layers22FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.The first access control stepis entityauthentication分层信任：以通过进程与中心的距离来判断其可信度和访问权限：离中心越近的进程程越可信
+
+=== Slide 16 (ppt/slides/slide23.xml) ===
+分层结构好处层次结构：允许我们识别非常关键的部分，然后认真分析其正确性，这样问题就会少一些；·隔离将问题的影响范围限制在问题发生的层及上层，从而可以限制大多数问题的影响23
+
+=== Slide 17 (ppt/slides/slide24.xml) ===
+KernelizedDesignA kernel is the part of the OS that performs the lowest-level functionsSynchronizationInterprocesscommunicationMessage passingInterrupt handlingA security kernel is responsible for enforcing the security mechanisms of the entire OSTypically contained within the kernel负责实施整个操作系统的安全机制负责在硬件、计算系统的其他部分之间提供安全接口24FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 18 (ppt/slides/slide25.xml) ===
+VirtualizationWith virtualization, the OS presents each user with just the resources that user should seeThe user has access to a virtual machine (VM), which contains those resourcesThe user cannot access resources that are available to the OS but exist outside the VMA hypervisor, or VM monitor, is the software that implements a VMTranslates access requests between the VM and the OSCan support multiple OSs in VMs simultaneouslyHoneypot: A VM meant to lure an attacker into an environment that can be both controlled and monitored25Digital Twin沙箱是一个受保护的环境，程序可以在沙箱中运行而不会危及操作系统, Java
+
+=== Slide 19 (ppt/slides/slide26.xml) ===
+Modular OS Design26Modulesare subject to updating/overwriting, so theycannot trust one another
+
+=== Slide 20 (ppt/slides/slide27.xml) ===
+Reference Monitor27FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 21 (ppt/slides/slide28.xml) ===
+Trusted Computing Base (TCB)28可信系统中用于实施安全策略的所有事物的一个统称:为增强系统安全策略的所有必需的元素由可信操作系统的某些部分掏戚，我们依靠这些部分来正确地实施安全策略
+
+=== Slide 22 (ppt/slides/slide29.xml) ===
+Trusted SystemsA trusted system is one that has been shown to warrant some degree of trust that it will perform certain activities faithfullyCharacteristics of a trusted system:A defined policy that details what security qualities it enforcesAppropriate measures and mechanisms by which it can enforce security adequatelyIndependent security or evaluation to ensure that the mechanisms have been selected and implemented properly29FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.可信系统是指这个系统不但达到了设计的安全需求，而且得到了用户的信任（e.g.,用户相信设计方案，专家的评估，同行的意见）
+
+=== Slide 23 (ppt/slides/slide3.xml) ===
+History of Operating SystemsSingle-user systems, no OSAnentire computer was dedicated to one program at a time, but this approach proved wastefulSingle Chip Microcomputer（单片机，灯光秀）MultiprogrammedOS, aka monitors，Multiple users, 1970s, Unix (Bell Labs)Multiple programsScheduling, sharing, concurrent usePersonal computersThe first PC took a major step back, as they were dedicated to single users andeffectivelyone program at a timeMultitasking returned to the mainstream in the1990s, and with it came all the lessons of the early shared computers3
+
+=== Slide 24 (ppt/slides/slide30.xml) ===
+Other Trusted System CharacteristicsSecure startupSystem startup is a tricky time for security, as most systems load basic I/O functionality before being able to load security functionsTrusted pathAnunforgeableconnectionby which the user can be confident of communicating directly with the OSObject reuse controlOSclears memorybefore reassigning it to ensure that leftover data doesn’t become compromisedCold boot attacks:memory dumpAuditTrusted systems track security-relevant changes, such as installation of new programs or OS modificationAudit logs must be protected againsttampering and deletion30
+
+=== Slide 25 (ppt/slides/slide31.xml) ===
+History of Trusted Systems31FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 26 (ppt/slides/slide32.xml) ===
+SummaryOSs have evolved from supporting single users and single programs to many users and programs at onceResources that require OS protection: memory, I/O devices, programs, and networksOSs use layered and modular designs for simplification and to separate critical functions from noncritical onesResource access control can be enforced in a number of ways, including virtualization, segmentation, hardware memory protection, and reference monitorsRootkits are malicious software packages that attain root status or effectively become part of the OS32FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 27 (ppt/slides/slide33.xml) ===
+RootkitsArootkit is a malicious softwarepackage that attains and takes advantage of root status or effectively becomes part of the OSRootkits often go to great length to avoid being discovered or, if discovered and partially removed, to reestablish themselvesThis can include intercepting or modifying basic OS functions33FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 28 (ppt/slides/slide4.xml) ===
+4
+
+=== Slide 29 (ppt/slides/slide5.xml) ===
+Operating System Functions5操作系统是所有系统资源的基本控制器——>主妥的攻击目标
+
+=== Slide 30 (ppt/slides/slide6.xml) ===
+Protected ObjectsMemorySharable I/O devices, such as disksSerially reusable I/O devices, such as printersSharable programs andsubproceduresNetworksSharable data6FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 31 (ppt/slides/slide7.xml) ===
+Separation and SharingMethods of separation:Physical:不同的进程使用不同的物理对象Temporal:不同安全要求的进程，在不同的时间段执行Logical:程序不能访问许可域之外的对象, VMCryptographicMethods of supporting separation/sharing:Do not protect:分离的时间中运行时，操作系统不予以保护Isolate:并发，每个进程都拥有自己的地址空间、文件及其他对象Share all（公共数据）or share nothing（私有数据）Share but limit access：访问限制（RWX）,检查每个用户访问对象7FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 32 (ppt/slides/slide8.xml) ===
+Hardware Protection of Memory8FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.单用户操作系统
+
+=== Slide 33 (ppt/slides/slide9.xml) ===
+Fence Registers9界地址寄存器（fenceregister）重定位能力只能防止用户程序干涉操作系统，而不能保护用户程序之间不相互干涉
+

@@ -1,0 +1,132 @@
+=== Slide 1 (ppt/slides/slide1.xml) ===
+Security in Computing,Fifth EditionChapter 3: Programs and ProgrammingFromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.1
+
+=== Slide 2 (ppt/slides/slide10.xml) ===
+The Stack10FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.栈（Stack）是程序之间进行数据交换的关键数据结构——先进后出当过程A调用过程B时，A将其返回地址（即程序计数器Prog Ctr的当前值）压入栈当B退出时，将继续从这个StackPtr地址指向执行BA
+
+=== Slide 3 (ppt/slides/slide11.xml) ===
+The Stack after Procedure Calls11过程A调用过程B时，过程B和过程A返回指针一起添加到堆栈中当过程B完成运行时，过程A堆栈中弹出将继续执行它停止的地方
+
+=== Slide 4 (ppt/slides/slide12.xml) ===
+Compromised Stack12FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.如果攻击者能够覆写（overwrite）程序计数器，使得程序返回之后重定向程序执行路径
+
+=== Slide 5 (ppt/slides/slide13.xml) ===
+How overwriting happensFromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.13栈（Stack）：用于嵌套调用程序堆（Heap）：动态内存空间（即程序编译时大小未知）堆和栈会朝着彼此增长，攻击者可以预测（或操纵）在某一点它们可能会碰撞在一起
+
+=== Slide 6 (ppt/slides/slide14.xml) ===
+Overwriting Memory for ExecutionOverwrite the program counter stored in the stackOverwrite part of the code in low memory, substituting new instructionsOverwrite the program counter and data in the stack so that the program counter points to the stack14FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 7 (ppt/slides/slide15.xml) ===
+Harm from Buffer OverflowsOverwrite:Another piece of your program’s dataAn instruction in your programData or codebelonging to anotherprogramData or code belonging to theoperating systemOverwriting a program’s instructions gives attackers that program’s execution privilegesOverwriting operating system instructions gives attackers the operating system’s executionprivileges(rootkit)15FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 8 (ppt/slides/slide16.xml) ===
+Overflow CountermeasuresStaying within boundsChecklengthsbefore writingConfirm thatarray subscriptsare within limits (but hard to check,example?)Double-checkboundarycondition code for off-by-one errorsLimit inputto the number of acceptable charactersLimit programs’ privilegesto reduce potential harmMany languages have overflow protections (Java)Code analyzers can identify many overflow vulnerabilitiesCanary（金丝雀）values in stack to signal modificationStack Guard插入金丝雀(随机值）用来标志修改，如果攻占者重写程序计数器和这个添加的值，Stack Guard会增添一个终止代码来检测修改的值并在返回前发出一个错误信号16FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 9 (ppt/slides/slide17.xml) ===
+FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.17
+
+=== Slide 10 (ppt/slides/slide18.xml) ===
+18
+
+=== Slide 11 (ppt/slides/slide19.xml) ===
+Don’t try this at home !
+
+=== Slide 12 (ppt/slides/slide2.xml) ===
+Objectives for Chapter 3Learn about memory organization,buffer overflows, and relevant countermeasuresCommon programming bugs, such as off-by-one errors, race conditions, and incomplete mediationSurvey of past malware and malware capabilitiesVirus detectionTips for programmers on writing code for security2FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 13 (ppt/slides/slide20.xml) ===
+Incomplete Mediation（仲裁、验证）Mediation: Verifying that the subject isauthorizedto perform the operation on an objectPreventing incomplete mediation:Validate all inputsLimit users’ access to sensitive data and functionsComplete mediation using a reference monitor20FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 14 (ppt/slides/slide21.xml) ===
+Time-of-Check to Time-of-UseMediation performed with a “bait and switch”（偷梁换柱）in the middle21检查时刻到使用时刻期间（验证不连续）漏洞Replacement, during interruption(say, procedure switch)
+
+=== Slide 15 (ppt/slides/slide22.xml) ===
+Race Conditions竞争条件OS资源22FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 16 (ppt/slides/slide23.xml) ===
+Race Conditions23FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.锁定
+
+=== Slide 17 (ppt/slides/slide24.xml) ===
+Other Programming OversightsUndocumented access points (backdoors)Off-by-one errors(e.g.,repeatwhilei<=n ori<n?)Integer overflowsUnterminated null-terminated stringParameter length, type, or number errorsUnsafe utility libraries24FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 18 (ppt/slides/slide25.xml) ===
+MalwarePrograms planted by an agent with malicious intent to cause unanticipated or undesired effectsVirusA program that canreplicate itselfandpass on malicious codeto othernonmaliciousprograms by modifying themWormA program thatspreads copiesof itselfthrough a networkTrojan horseCode that, in addition to its stated effect, has a second, nonobvious, malicious effect公元前十二世纪希腊和特洛伊之间的一场战争25
+
+=== Slide 19 (ppt/slides/slide26.xml) ===
+背景介绍特洛伊战争发生在迈锡尼文明时期。迈锡尼文明是世界早期较为发达的文明，兴盛于公元前15世纪~前12世纪，最鼎盛的时期在公元前13世纪左右。这支文明的创造者已被证实是古希腊人的一支，只不过那个时候，他们还没有“希腊人”的称呼，他们被称作阿卡亚人。阿卡亚人大约在公元前1650年左右从巴尔干半岛迁徙到古希腊半岛的中部和南部，并在那里建立起一个奴隶制国家——迈锡尼王国。公元前12世纪，迈锡尼王国为了争夺海上霸权而跟小亚细亚西南沿海的国家发生冲突，其中最著名的就是特洛伊战争。10年的特洛伊战争消耗了迈锡尼大量的元气，让这个一度辉煌的国家变得千疮百孔。一场战争拖垮了一个文明，这也是特洛伊战争备受关注的一个原因。26
+
+=== Slide 20 (ppt/slides/slide27.xml) ===
+有一天非常奇怪。希腊联军的战舰突然扬帆离开了。平时喧闹的战场变得寂静无声。特洛伊人以为希腊人撤军回国了，他们跑到城外，却发现海滩上留下一只巨大的木马。特洛伊人惊讶地围住木马，他们不知道这木马是干什么用的。有人要把它拉进城里，有人建议把它烧掉或推到海里。正在这时，有几个牧人捉住了一个希腊人，他被绑着去见特洛伊国王。这个希腊人告诉国王，这个木马是希腊人用来祭祀雅典娜女神的。希腊人估计特洛伊人会毁掉它，这样就会引起天神的愤怒。但如果特洛伊人把木马拉进城里，就会给特洛伊人带来神的赐福，所以希腊人把木马造得这样巨大，使特洛伊人无法拉进城去。特洛伊国王相信了这话，正准备把木马拉进城时，特洛伊的祭司拉奥孔跑来制止，他要求把木马烧掉，并拿长矛刺向木马。木马发出了可怕的响声，这时从海里窜出两条可怕的蛇，扑向拉奥孔和他的两个儿子。拉奥孔和他的儿子拼命和巨蛇搏斗，但很快被蛇缠死了。两条巨蛇从容地钻到雅典娜女神的雕像下，不见了。希腊人又说，“这是因为他想毁掉献给女神的礼物，所以得到了惩罚。”特洛伊人赶紧把木马往城里拉。但木马实在太大了，它比城墙还高，特洛伊人只好把城墙拆开了一段。当天晚上，特洛伊人欢天喜地，庆祝胜利，他们跳着唱着，喝光了一桶又一桶的酒，直到深夜才回家休息，做着关于和平的美梦。深夜，一片寂静。劝说特洛伊人把木马拉进城的希腊人其实是个间谍。他走到木马边，轻轻地敲了三下，这是约好的暗号。藏在木马中的全副武装的希腊战士一个又一个地跳了出来。他们悄悄地摸向城门，杀死了睡梦中的守军，迅速打开了城门，并在城里到处点火。隐蔽在附近的大批希腊军队如潮水般涌入特洛伊城。10年的战争终于结束了。希腊人把特洛伊城掠夺成空，烧成一片灰烬。男人大多被杀死了，妇女和儿童大多被卖为奴隶，特洛伊的财宝都装进了希腊人的战舰。海伦也被墨涅依斯带回了希腊。 特洛伊战争就此结束。27
+
+=== Slide 21 (ppt/slides/slide28.xml) ===
+Types of Malware28FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 22 (ppt/slides/slide29.xml) ===
+Types of Malware (cont.)29FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 23 (ppt/slides/slide3.xml) ===
+3Bug
+
+=== Slide 24 (ppt/slides/slide30.xml) ===
+History of Malware30FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 25 (ppt/slides/slide31.xml) ===
+History of Malware (cont.)31FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 26 (ppt/slides/slide32.xml) ===
+32
+
+=== Slide 27 (ppt/slides/slide33.xml) ===
+Harm from MalwareHarm to users and systems:Sending email to user contactsDeleting or encrypting files勒索病毒Modifying system information, such as the Windows registryStealing sensitive information, such as passwordsAttaching to critical system filesHide copies of malware in multiple complementary locationsHarm to the world:Some malware has been known to infect millions of systems, growing at a geometric rateInfected systems often become staging areas for new infections33FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 28 (ppt/slides/slide34.xml) ===
+Transmission and PropagationSetup and installer programAttached fileDocument virusesAutorunUsingnonmaliciousprograms:Appended virusesViruses that surround a programIntegrated viruses and replacements34FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 29 (ppt/slides/slide35.xml) ===
+Malware ActivationOne-time execution (implanting)Boot sector virusesMemory-resident virusesApplication filesCode libraries35FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 30 (ppt/slides/slide36.xml) ===
+FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.36
+
+=== Slide 31 (ppt/slides/slide37.xml) ===
+Countermeasures for UsersUse software acquired from reliable sourcesTest software in an isolated environmentOnly open attachments when you know them to be safeTreat every website as potentially harmfulCreate and maintain backups37FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 32 (ppt/slides/slide38.xml) ===
+DetectionVirus scanners look for signs of malicious code infection using signatures in program files and memoryTraditional virus scanners have trouble keeping up with new malware—detect about 45% of infectionsDetection mechanisms:Known string patterns in files or memoryExecution patternsStorage patterns38FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 33 (ppt/slides/slide39.xml) ===
+Virus Signatures39FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 34 (ppt/slides/slide4.xml) ===
+Memory Allocation4内存的任意位置都能够存放任何片段的代码和数据指令从内在底部（低地址）向上移动移动如未检查．可能进入堆和钱堆（Heap）:存储动态产生的数据栈（Stack）：存储予任务的调用与返回数据任何内存数据（代码、 用户数据、指令等）——0和l串
+
+=== Slide 35 (ppt/slides/slide40.xml) ===
+Countermeasures for DevelopersModular code: Each code module should beSingle-purposeSmallSimpleIndependentEncapsulationInformation hidingMutual SuspicionConfinementGenetic diversity40FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 36 (ppt/slides/slide41.xml) ===
+Code TestingUnit testingIntegration testingFunction testingPerformance testingAcceptance testingInstallation testingRegression testingPenetration testing41
+
+=== Slide 37 (ppt/slides/slide42.xml) ===
+Design Principles for SecurityLeast privilegeEconomy of mechanismOpen designComplete mediationPermission basedSeparation of privilegeLeast common mechanismEase of use42
+
+=== Slide 38 (ppt/slides/slide43.xml) ===
+Other CountermeasuresGoodProofs of program correctness—where possibleDefensive programmingDesign by contractBadPenetrate-and-patchSecurity by obscurity43
+
+=== Slide 39 (ppt/slides/slide44.xml) ===
+SummaryBuffer overflow attacks can take advantage of the fact that code and data are stored in the same memory in order to maliciously modify executing programsPrograms can have a number of other types of vulnerabilities, including off-by-one errors, incomplete mediation, and race conditionsMalware can have a variety of harmful effects depending on its characteristics, including resource usage, infection vector, and payloadDevelopers can use a variety of techniques for writing and testing code for security44
+
+=== Slide 40 (ppt/slides/slide5.xml) ===
+Data vs. Instructions5FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.计算机使用指针或寄存器（即程序计数器，program counter）来指向下一条执行指令硬件仅仅是获取程序计做器指向地址的字节．然后作为指令执行， 如jump,gotoContext（上下文）
+
+=== Slide 41 (ppt/slides/slide6.xml) ===
+Buffer Overflows缓冲区溢出Occur when data is writtenbeyond the spaceallocated for it, such as a10thbyte in a 9-byte arrayIn a typical exploitable buffer overflow, an attacker’s inputs are expected to go into regions of memory allocated for data, but those inputs are instead allowed tooverwritememory holdingexecutable codeThe trick for an attacker isfinding buffer overflow opportunitiesthat lead to overwritten memory being executed, and finding the right code to input6FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 42 (ppt/slides/slide7.xml) ===
+How Buffer Overflows Happenchar sample[10];inti=0;for (i=0;i<=9;i++)sample[i] = ‘A’;sample[10] = ‘B’;the sub…… of the array out  of range7FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.‘A’‘A’‘A’‘A’‘A’‘A’‘A’‘A’‘B’Sample[0]‘A’SampleSample[10]Sample[9]sum
+
+=== Slide 43 (ppt/slides/slide8.xml) ===
+Memory Organization8FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 44 (ppt/slides/slide9.xml) ===
+Where a Buffer Can Overflow,Cstr()9FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.Thememory that’s overwritten depends onwhere the buffer resides
+
