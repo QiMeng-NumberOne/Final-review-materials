@@ -1,0 +1,279 @@
+=== Slide 1 (ppt/slides/slide1.xml) ===
+Security in Computing,Fifth EditionChapter 6: NetworksFromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.1
+
+=== Slide 2 (ppt/slides/slide10.xml) ===
+Communication Media Pros/Cons10FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 3 (ppt/slides/slide11.xml) ===
+Communication Media Vulnerability11FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.窃听
+
+=== Slide 4 (ppt/slides/slide12.xml) ===
+Threats to Network CommunicationsInterception窃听, or unauthorized viewingModification篡改, or unauthorized changeFabrication (Forge)伪造, or unauthorized creationInterruption中断, or preventing authorized access12FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 5 (ppt/slides/slide13.xml) ===
+What Makes a Network Vulnerable to Interception?AnonymityAn attacker can attempt many attacks, anonymously, from thousands of miles awayMany points of attackLarge networks mean many points of potential entrySharingNetworked systems open up potential access to more users than do single computersSystem complexityOne system is very complex and hard to protect; networks of many different systems, with disparate OSs, vulnerabilities, and purposes are that much more complexUnknown perimeterNetworks, especially large ones, change all the time, so it can be hard to tell which systems belong and are behaving, and impossible to tell which systems bridge networksUnknown pathThere may be many paths, including untrustworthy ones, from one host to another13FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 6 (ppt/slides/slide14.xml) ===
+What Makes a Network Vulnerable to Interception?AnonymityAn attacker can attempt many attacks, anonymously, from thousands of miles awayMany points of attackLarge networks mean many points of potential entrySharingNetworked systems open up potential access to more users than do single computersSystem complexityOne system is very complex and hard to protect; networks of many different systems, with disparate OSs, vulnerabilities, and purposes are that much more complexUnknown perimeterNetworks, especially large ones, change all the time, so it can be hard to tell which systems belong and are behaving, and impossible to tell which systems bridge networksUnknown pathThere may be many paths, including untrustworthy ones, from one host to another14FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 7 (ppt/slides/slide15.xml) ===
+Security Perimeters（边界）15FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.Within each perimeter, you largely have control of your cables, devices, and computers because ofphysical controls, so you don’t need to worry as much about protection.But to do anything useful, you have to make connections between security perimeters, which exposes you to all sort of cables, devices, and computers you can’t control.Cryptographyis the most common and useful control for addressing this threat.
+
+=== Slide 8 (ppt/slides/slide16.xml) ===
+Unknown Perimeter16FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 9 (ppt/slides/slide17.xml) ===
+17
+
+=== Slide 10 (ppt/slides/slide18.xml) ===
+Unknown Path18FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.routing:determines source-destination route taken by packets
+
+=== Slide 11 (ppt/slides/slide19.xml) ===
+Modification and Fabrication伪造Datacorruption数据腐化——Intentional, maliciousSequencing乱序Permuting the order of data, such as packets arriving in sequenceSubstitution替换Replacement of one piece of a data stream with anotherInsertion插入A form of substitution in which data values are inserted into a streamReplay重放Legitimate data are intercepted and reused19FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.Corrupt～Compromise maliciously control
+
+=== Slide 12 (ppt/slides/slide2.xml) ===
+Objectives for Chapter 6Networking basicsNetwork threats and vulnerabilitiesWiFisecurityDenial-of-service attacksCryptographictools for Network SecurityTypes of firewalls and what they doIntrusion detection and prevention systems2FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 13 (ppt/slides/slide20.xml) ===
+Sources of Data Corruption20
+
+=== Slide 14 (ppt/slides/slide21.xml) ===
+Simple Replay Attack21FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 15 (ppt/slides/slide22.xml) ===
+网络安全对策用户访问安全性通过身份认证和访问控制，阻止资源被非法用户访问数据完整性数据的完整、可用数据机密性信息的加密存储和传输SecureCommunicationProtocols
+
+=== Slide 16 (ppt/slides/slide23.xml) ===
+SecurecommunicationProtocols安全通信协议的含义在网络协议中使用加密技术、认证技术等密码技术以保证信息交换安全的网络协议具体地说就是建立在密码体系上的一种互通协议，为需要安全的各方提供一系列的密钥管理、身份认证及信息完整性等措施以保证通信的安全完成
+
+=== Slide 17 (ppt/slides/slide24.xml) ===
+安全通信协议的基石通信技术密码技术对称密钥算法非对称密钥算法安全机制和服务保密：机密性认证：完整性和真实性相关问题密钥的分发和交换
+
+=== Slide 18 (ppt/slides/slide25.xml) ===
+应用层安全Link链路层
+
+=== Slide 19 (ppt/slides/slide26.xml) ===
+Secure Shell (SSH)Originally developed for UNIX but now available on most OSsProvides an authenticated, encrypted path to the OS command line over the networkReplacement for insecure utilities such as Telnet, rlogin, andrshProtects against spoofing attacks and modification of data in communication26FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 20 (ppt/slides/slide27.xml) ===
+传输层安全Link链路层
+
+=== Slide 21 (ppt/slides/slide28.xml) ===
+网络层安全WEP/WPA链路层
+
+=== Slide 22 (ppt/slides/slide29.xml) ===
+Wireless Network SecurityWEPWPA29
+
+=== Slide 23 (ppt/slides/slide3.xml) ===
+What’s the Internet:“nuts and bolts”viewbillions of connected computing devices:hosts=end systemsrunningnetwork appscommunication linksfiber, copper, radio, satellitetransmission rate:bandwidthpacket switches:forward packets (chunks of data)routersandswitcheswiredlinkswirelesslinksroutersmartphonePCserverwirelesslaptop1-3mobile networkglobal ISPregional ISPhomenetworkinstitutionalnetworkThe Internet is a computer network that interconnects billions of computing devices throughout theworld.基本组成成分
+
+=== Slide 24 (ppt/slides/slide30.xml) ===
+Vulnerabilities in Wireless NetworksConfidentiality:一种能够确保资源只被授权的当事人查看的系统能力Integrity:一种能够确保资糠只被授权的当事人修改的系统能力Availability:一种能够确保资源可以被任何授权的当事人使用的系统能力Authentication:一种能够确认资源或信息所有者身份的系统能力UnauthorizedWiFiaccessWiFiprotocol weaknessesPicking up the beaconSSID in all framesAssociation issues30FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 25 (ppt/slides/slide31.xml) ===
+Failed Countermeasure: WEPWired equivalent privacy, or WEP, was designed at the same time as the original 802.11WiFistandards as the mechanism for securing those communicationsWeaknesses in WEP were first identified in 2001, four years after releaseMore weaknesses were discovered over the course of years, until any WEP-encrypted communication could be cracked in a matter of minutes31FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 26 (ppt/slides/slide32.xml) ===
+How WEP WorksClient and access point (AP) have a pre-shared keyAP sends a random number to the client, which the client then encrypts using the key and returns to the APThe AP decrypts the number using the key and checks that it’s the same number to authenticate the clientOnce the client is authenticated, the AP and client communicate using messages encrypted with the key32FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 27 (ppt/slides/slide33.xml) ===
+How WEP WorksKey Stream = RC4(v,k)MessageCRCTransmitted DataXORCipher TextVPlain TextPRF
+
+=== Slide 28 (ppt/slides/slide34.xml) ===
+WEP WeaknessesWeak encryption keyWEP allows to be either 64- or 128-bit, but 24 of those bits are reserved for initialization vectors (IV), thus reducing effective key size to 40 or 104 bitsKeys were either alphanumeric or hex phrases that users typed in and were therefore vulnerable to dictionary attacksStatic keySince the key was just a value the user typed in at the client and AP, and since users rarely changed those keys, one key would be used for many months of communicationsWeak encryption processA40-bit keycan be brute forced easily. Flaws that were eventually discovered in the RC4 encryption algorithm WEP uses made the 104-bit keys easy to crack as well34FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 29 (ppt/slides/slide35.xml) ===
+WEP Weaknesses (cont.)Weak encryption algorithmWEP used RC4 in a strange way (always a bad sign), which resulted in a flaw that allowed attackers to decrypt large portions of any WEP communicationIV collisionsThere were only 16 million possible values of IV, which, in practice, is not that many to cycle through for cracking. Also, they were not as randomly selected as they should have been, with some values being much more common than others24位以可预见的模式循环．直到所有的24位棋式都循环完毕（约1600万次迭代）Faulty integrity checkWEP messages included achecksumto identify transmission errors but did not use one that could address malicious modificationNo entity (user) authenticationOnly machine-to-machine authentication via shared keyAny client that knows the AP’s SSID and MAC address is assumed to be legitimate35FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 30 (ppt/slides/slide36.xml) ===
+WPA (WiFiProtected Access)WPA was designed in 2003 as a replacement for WEP and was quickly followed in 2004 by WPA2, the algorithm that remains the standard todayNon-static encryption keyWPA uses a hierarchy of keys: New keys are generated for confidentiality and integrity of each session, and the encryption key is automatically changed on each packetThis way, the keys that are most important are used in very few places and indirect ways, protecting them from disclosureAuthenticationWPA allows authentication by password, token, or certificate36FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 31 (ppt/slides/slide37.xml) ===
+WPA (cont.)Strong encryptionWPA adds support for AES, a much more reliably strong encryption algorithmIntegrity protectionWPA includes a 64-bit cryptographic integrity check (MAC)Session initiationAuthenticated keyexchangesessionkeyWPA sessions begin with authentication and a four-way handshake that results in separate keys for encryption and integrity on both endsWhile there are some attacks against WPA, they are either of very limited effectiveness or require weak passwords37FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 33 (ppt/slides/slide39.xml) ===
+SSL/TLS
+
+=== Slide 34 (ppt/slides/slide4.xml) ===
+Internet:“network of networks”Interconnected ISPsprotocolscontrol sending, receiving of messagese.g., TCP, IP, HTTP, Skype,  802.11Internet  standardsRFC: Request for commentsIETF: Internet Engineering Task ForceWhat’s the Internet:“nuts and bolts”view1-4mobile networkglobal ISPregional ISPhomenetworkinstitutionalnetwork
+
+=== Slide 35 (ppt/slides/slide40.xml) ===
+SSL/TLS简介SSL（Secure Socket Layer)，安全套接层）协议;TLS(Transport Layer Security)Netscape公司于1994年最先提出来的被设计成使用TCP来提供一种可靠的端到端的安全服务，是一种基于会话的加密和认证的协议在客户和服务器之间提供了一个安全的管道为了防止客户/服务器应用中的监听、篡改、消息伪造等，SSL提供了服务器认证和可选的客户端认证通过在两个实体间建立一个共享的秘密，SSL提供机密性TLS工作在传输层（TCP）和应用层之间TLS独立于应用层协议，高层协议可基于TLS进行透明的传输
+
+=== Slide 36 (ppt/slides/slide41.xml) ===
+TLS and SSLSSL 1.0 and 2.0(Netscape)19941995SSL 3.0(Netscape & Microsoft PCT)1999TLS 1.0 (=SSL 3.1)(IETF standard)20062008TLS 1.2TLS 1.1TLS 1.0 and 1.1 still widely usedIn this talk: TLS ≈ TLS 1.0 ≈ TLS 1.1 ≈ TLS 1.2 (in use)Recommended version (now) TLS 1.3, since 2014
+
+=== Slide 37 (ppt/slides/slide42.xml) ===
+SSL/TLS安全连接的特性连接具有机密性在初始化连接后，协商密钥，基于对称密码体制对数据进行加密（如AES等）对端实体认证可采用对称密码体制：需要长期的共享密钥可采用非对称密码体制或公开密钥密码体制（如ElGamal、ECDSA）连接是可靠的消息传输使用加密MAC算法进行消息完整性检查
+
+=== Slide 38 (ppt/slides/slide43.xml) ===
+SSL/TLS安全协议的组成TLS不是单个的协议，而是两层协议TLS记录协议基于可靠的传输层协议，用来封装高层协议高层协议主要包括TLS握手协议、修改密码规程协议、告警协议。TLSRecordProtocolTLS Handshake Protocol
+
+=== Slide 39 (ppt/slides/slide44.xml) ===
+SSL/TLS Sessions:Handshake + Record Layer44TLS Handshake ProtocolTLSRecordProtocolClientServerTLS Handshake（握手协议）作用:Negotiation ofcryptographic parameters(Mutual)authenticationEstablishment ofsession key kAuthenticated Key ExchangeTLS RecordProtocol（记录协议）作用:Dataencryptionandauthenticationusingthesession key k
+
+=== Slide 40 (ppt/slides/slide45.xml) ===
+SSL/TLSRecord Layer记录协议层功能为高层协议提供基本的安全服务记录层封装各种高层协议任意大小的非空块从高层接收尚未解释的数据分块将高层数据分割成TLS明文记录压缩和解压所有记录采用会话状态中定义的压缩算法进行压缩记录的保护所有记录通过握手协议确定的会话密钥、加密算法和MAC算法进行保护
+
+=== Slide 41 (ppt/slides/slide46.xml) ===
+SSL/TLS Record Layer操作过程
+
+=== Slide 42 (ppt/slides/slide47.xml) ===
+SSL/TLSHandshake握手协议握手协议在TLS记录层之上，负责建立当前会话状态的参数客户端和服务器相互鉴别对方身份（利用证书和认证机制）协商安全参数（加密和MAC算法，加密密钥等）由一系列在客户和服务器间交换的消息组成每个消息由3个字段组成：消息类型、以字节为单位的消息长度以及这个消息有关的参数内容
+
+=== Slide 44 (ppt/slides/slide49.xml) ===
+握手协议定义的消息类型- 1消息类型说明参数hello_request握手请求，服务器可在任何时候向客户端发送该消息。若客户端正在进行握手过程就可忽略该消息。否则客户端发送cleint_hello消息，启动握手过程。无client_hello客户启动握手请求，该消息时当客户第一次连接服务器时向服务器发送的第一条消息。该消息中包括了客户端支持的各种算法（Cipher Suits)。若服务器端不能支持，则本次会话可能失败。版本、随机数、会话ID、密文族、压缩方法server_hello其结构与client_hello消息，该消息是服务器对客户端client_hello消息的响应。版本、随机数、会话ID、密文族、压缩方法server_certificate服务器提供的证书。如果客户要求对服务器进行认证，则服务器在发送server_hello消息后，向客户端发送该消息。证书的类型一般是X.509v3。X．509v3证书链server_key_exchange服务器密钥交换。当服务器不使用证书，或其证书中仅提供签名而不提供密钥时，需要使用本消息来交换密钥。参数、签名
+
+=== Slide 45 (ppt/slides/slide5.xml) ===
+What’s the Internet: a service viewinfrastructure that provides services to applications:Web, VoIP, email, games, e-commerce, social nets, …provides programming interface to appshooks that allow sending and receiving  app programs to“connect”to Internetprovides service options, analogous to postal service1-5mobile networkglobal ISPregional ISPhomenetworkinstitutionalnetwork
+
+=== Slide 46 (ppt/slides/slide50.xml) ===
+握手协议定义的消息类型- 2消息类型说明参数certificate_request用于服务器向客户端要求一个客户证书。类型、授权server_hello_done该消息表明服务器端的握手请求报文已经发送完毕，正在等待客户端的响应。客户端在收到该消息时，将检查服务器提供的证书及其他参数是否是有效、可以接受的。无client_certificate客户端对服务器certificate_request消息的响应，只有在服务器端要求客户证书的时候使用。一般该消息是客户端收到server_hello_done消息后所发送的第一条消息。若客户端没有合适的证书，则向服务器端发送no_certificate的告警消息（无证书可能导致握手失败）X．509v3证书链client_key_exchange客户密钥交换。当客户不使用证书，或其证书中仅提供签名而不提供密钥时，需要使用本消息来交换密钥。参数、签名certificate_verify该消息用于向服务器提供对客户证书的验证。签名finished该消息在“加密规约修改”（Change Cipher Spec）消息之后发送，以证实握手过程已经成功完成。本消息发送后，发送方开始使用协商的新参数来执行操作。该消息需要在两个方向上传送。HMAC值
+
+=== Slide 47 (ppt/slides/slide51.xml) ===
+Cipher SuitesStandardizedselection of algorithmsfor key exchange, signature, encryption, hashingTLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA4 groupsof Cipher Suites:StaticDiffie-Hellman (TLS-DH)Ephemeral Diffie-Hellman (TLS-DHE)RSA encryption (TLS-RSA)Pre-Shared Key:Pre-shared Keys (TLS_PSK)RSA Encryption (TLS_RSA_PSK)EphemeralDiffie-Hellman (TLS_DHE_PSK)Handshake protocol is (slightly) different for each group51
+
+=== Slide 48 (ppt/slides/slide52.xml) ===
+握手协议过程– TLS_DHE_*
+
+=== Slide 49 (ppt/slides/slide53.xml) ===
+TLS协议运行实例- 1客户机使用IE浏览器向服务器发送客户端的TLS版本号、密码设置、随机数和需要服务器使用TLS协议与客户机进行通信的其它信息；IE浏览器使用https协议向服务器申请建立TLS会话；服务器向客户端发送服务器端的TLS版本号、密码设置、随机数和客户端使用TLS协议与服务器通信需要的其它信息。同时服务器端发送它自己的数字证书供客户认证，如果认为客户端需要身份认证则要求客户发送证书，该操作是可选的；客户端利用服务器发送信息认证服务器的真实身份并取得公开密钥等，如果服务器不被认证，用户被告警发生了问题，通知不能建立带有加密和认证的连接。若服务器能被成功地认证，客户机将继续下一步。https://en.wikipedia.org/wiki/Transport_Layer_Security
+
+=== Slide 51 (ppt/slides/slide55.xml) ===
+Secure Communication (Cryptographic Protocols)ConfidentialityIntegrityAuthenticityThreats (DoS)and Countermeasures forAvailabilityComputer resources are available or accessible by an authorized user whenever it is neededChapter 6.4 and 6.555
+
+=== Slide 52 (ppt/slides/slide56.xml) ===
+Denial of Service (DoS)DoSattacks are attempts to defeat a system’savailabilityVolumetric attacks容量耗尽攻击Application-based attacksDisabled communications网络无法提供正常的服务或资源访问，使目标系统服务系统停止响应甚至崩溃Hardware or software failure56FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.What are the other harms of DoS attacks from the perspectivesof victims?
+
+=== Slide 53 (ppt/slides/slide57.xml) ===
+High-level Ideas of DoS AttacksCreate a large flow of useless data of network protocolscausing network congestionleading to the attacked host, making it impossible for the attacked host to communicate with the outside world normallyUtilize the vulnerabilities of transmission or application protocolrepeated sending ofmalformed attack datacauses the system to allocate a large amount of system resources incorrectly, causing the host to hang or even crashforge protocol messages, invalidate the original services57
+
+=== Slide 54 (ppt/slides/slide58.xml) ===
+ICMP:Internet Control Message Protocol58FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.An “error detection and reporting mechanism”Goal: detect the connection status of the network, and also to ensure the accuracy of the connectionDetect whether the remote host exists (Ping)Establish and maintain routing statusRedirect data delivery path (ICMP redirection)Flow control
+
+=== Slide 55 (ppt/slides/slide59.xml) ===
+DoS Attack: Ping Flood59FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 56 (ppt/slides/slide6.xml) ===
+What’s a protocol?human protocols:“what’s the time?”“I have a question”introductions… specific messages sent… specific actions taken when messages received, or other eventsnetwork protocols:machines rather than humansall communication activity in Internet governed by protocolsprotocolsdefineformat,orderofmessages sent and receivedamong network entities, andactions takenon message transmission, receipt1-6
+
+=== Slide 57 (ppt/slides/slide60.xml) ===
+60
+
+=== Slide 58 (ppt/slides/slide61.xml) ===
+DoS Attack: Ping Flood61FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.How toamplifythe volume of attacking messages?
+
+=== Slide 59 (ppt/slides/slide62.xml) ===
+DoSAttack: Smurf Attack62FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.放大效应ECHO协议:指的是把接收到的信息按照原样返回;作用:主要用于检测和调试
+
+=== Slide 60 (ppt/slides/slide63.xml) ===
+DoSAttack: Echo-Chargen63FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.Chargen:Character Generator(test and debug)在TCP连接建立后，服务器不断传送任意的字符到客户端，直到客户端关闭连接接收到echo的主机会将它收到的所有数据返还给发送者A和B之间建立一个无限的循环How to prevent?Heartbeatмonitoring
+
+=== Slide 61 (ppt/slides/slide64.xml) ===
+DoSAttack: Teardrop Attack64FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.Send a series of packets thatcannot be properly assembledtogetherExhaust Receiving BufferIn extreme cases, cause the entire OS to lock upHeartbeatмonitoring
+
+=== Slide 62 (ppt/slides/slide65.xml) ===
+DoSAttack: DNS Spoofing65FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.Redirectthe user to malicious sitesApply Secure communication protocolNo auth. No integrityApplication layer
+
+=== Slide 63 (ppt/slides/slide66.xml) ===
+Distributed Denial of Service (DDoS)66FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.Conscriptan army of compromised machinesto attack a victimChoose a victim, and have the wholearmy unleash a DoS attack at onceTrojan Horseis a type of malware that downloadsonto a computer and gain users' system accessHow to install Trojan Horse?
+
+=== Slide 64 (ppt/slides/slide67.xml) ===
+Botnets67FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.Botnets are networks of machinesrunning malicious code under remote controlundetectedbecause they do little harm to the machines they run onexecute DDoS attackscommand and control(C&C) updates occurMultiple layersmaking the attackerdifficult to trace.Multiple redundant systemsone master or C&C node is taken down, the bots can continue to connect to the botnet
+
+=== Slide 66 (ppt/slides/slide69.xml) ===
+防范 DoS/DDoS 攻击课前预防：减少暴露、提升韧性、提前发现1🛡️缩小攻击面• 关闭不用的端口和服务• 及时修补系统与应用2⚖️提升系统韧性• 部署 CDN / Anycast / 负载均衡• 关键业务支持扩容与故障切换3📈尽早发现异常• 建立正常流量基线• 监测请求量、连接数和错误率恶意流量边缘防护业务可用BOTBOTBOTWAFCDNACL× ×核心服务教学重点：DDoS 防护不是只“加服务器”，而是分层过滤 + 弹性承载。
+
+=== Slide 67 (ppt/slides/slide7.xml) ===
+a human protocol and a computer network protocol:HiHiGot thetime?2:00TCP connectionresponseGethttp://www.awl.com/kurose-ross<file>timeTCP connectionrequestWhat’s a protocol?1-7Whyanswer？authentication
+
+=== Slide 68 (ppt/slides/slide70.xml) ===
+DDoS 发生时如何处置响应流程：快速识别、分流清洗、保持服务、复盘改进1🔍识别确认攻击类型定位受影响服务2🚦分流联系 ISP/CDN牵引到清洗中心3🛡️过滤限速、WAF、ACL阻断异常源4☁️保障保护核心业务降级非关键功能📋复盘更新规则演练预案课堂提醒提前确定联系人、阈值、牵引方式、降级页面和沟通模板。目标：保持可用性；减少影响；把经验写回预案。结论：预防重在“准备”，处置重在“速度”。
+
+=== Slide 69 (ppt/slides/slide71.xml) ===
+Port Scanning71FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 70 (ppt/slides/slide72.xml) ===
+FirewallsA device thatfiltersall traffic between a protected or “inside” network and less trustworthy or “outside” networkMost firewalls run as dedicated devicesEasier to design correctly and inspect for bugsEasier to optimize for performanceFirewalls implementsecurity policies, or set of rules that determine what traffic can or cannot pass throughA firewall is an example of areference monitor, which means it should have three characteristics:Always invoked (cannot be circumvented)TamperproofSmall and simple enough for rigorous analysis72FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 71 (ppt/slides/slide73.xml) ===
+Firewall Security Policy73FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 72 (ppt/slides/slide74.xml) ===
+Types of FirewallsPacket filtering gateways or screening routersStatefulinspection firewallsApplication-level gateways, also known as proxiesCircuit-level gatewaysGuardsPersonal or host-based firewalls74FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 73 (ppt/slides/slide75.xml) ===
+Packet-Filtering Gateways75FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.Network layerFiltering trafficon the basis of packet address and specific transport protocol type (e.g., HTTP traffic)
+
+=== Slide 74 (ppt/slides/slide76.xml) ===
+Packet-Filtering Gateways (cont.)76FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.Network layerFiltering traffic on the basis of source IP rather than portFiltering rules can also be based on combinations of addresses and ports/protocols
+
+=== Slide 75 (ppt/slides/slide77.xml) ===
+StatefulInspection Firewall77FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 76 (ppt/slides/slide78.xml) ===
+Application Proxy78FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.An application proxy simulates the behaviorof an application (application layer), purposes:Filtering potentially dangerousapplication-layerrequestsLog requests/accessesCache results to save bandwidthMost used:web proxy
+
+=== Slide 77 (ppt/slides/slide79.xml) ===
+Circuit-Level Gateway79FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.Work attransport layera virtual gateway between two networksimplement aVPN
+
+=== Slide 78 (ppt/slides/slide8.xml) ===
+Internet protocol stackapplication:supporting network applicationsFTP, SMTP, HTTPtransport:process-process data transferTCP, UDP (用户数据报协议)network:routing of datagrams from source to destinationIP, routing protocolslink:data transfer between neighboring  network elementsEthernet, 802.111 (WiFi), PPPphysical:bits“on the wire”applicationtransportnetworklinkphysical1-8为了方便管理互联网中的各种网络协议，网络设计者按照功能特性，以分层(layer)的方式组织协议以及实现这些协议的网络硬件和软件。Vulnerabilities?
+
+=== Slide 79 (ppt/slides/slide80.xml) ===
+GuardA sophisticated firewall that, like an application proxy, caninterpret dataat the protocol level and respondThe distinction between a guard and an application proxy can be fuzzy; the more protection features anapplication proxy implements, the more it becomes like a guardGuards may implement any programmable set of rules; for example:Limit the number of email messages a user can receiveLimit users’ web bandwidthFilter documents containing the word “Secret”Pass downloaded files through a virus scanner80FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 80 (ppt/slides/slide81.xml) ===
+Personal Firewalls81FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.A personal firewall runs on aworkstationor server and can enforcesecurity policy like other firewallsIn addition torestricting trafficby source IP and destination port, personal firewalls can restrict whichapplicationsare allowed to use the network
+
+=== Slide 81 (ppt/slides/slide82.xml) ===
+Virtual Private Networks (VPN)82FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.Ansecure tunnelthat providesauthentication,  confidentiality and integrityfor communication between two sitesover public networksconnects Office A to Office B over the Internet so they appear to their users as one seamless, private network.
+
+=== Slide 82 (ppt/slides/slide83.xml) ===
+VPN (cont.)83FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.a teleworker uses a VPN to connect to a remote office.She authenticates to the firewall (that’s acting as a VPN server), and the firewall passes that authentication information to the servers in the office so she can be appropriately access controlled.
+
+=== Slide 83 (ppt/slides/slide84.xml) ===
+Comparison of Firewall Types84FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.P. 320表6-6
+
+=== Slide 85 (ppt/slides/slide86.xml) ===
+What Firewalls Can and Cannot DoFirewalls can protect an environment only if they control theentireperimeterFirewalls do not protect data outside the perimeterFirewalls are the most visible part of an installation to the outside, so they are an attractive target for attackFirewalls must be correctly configured, that configuration must be updated as the environment changes, and firewall activity reports must be reviewed periodically for evidence of attempted or successful intrusionFirewalls exercise only minor control over the content admitted to the inside,meaning that inaccurate or malicious code must be controlled by means inside the perimeter86FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 86 (ppt/slides/slide87.xml) ===
+Intrusion Detection Systems (IDS)IDSs complementpreventative controls as a next line of defense.IDSs monitor activity to identify malicious or suspicious events. IDSs mayMonitoruser and system activityAuditsystem configurations forvulnerabilitiesandmisconfigurationsAssess integrityof critical system and data filesRecognizeknown attack patterns in system activityIdentifyabnormal activity through statistical analysisManage audit trailsand highlight policy violationsInstall and operatetraps to record information aboutintruders（orotherattackers）87
+
+=== Slide 87 (ppt/slides/slide88.xml) ===
+入侵检测系统的主要任务：操作系统或者网络行为的审计跟踪管理，并识别用户违反安全策略的行为总结防火墙只是防御为主，通过防火墙的数据便不再进行任何操作，IDS则进行实时的检测，发现入侵行为即可做出反应，是对防火墙弱点的修补防火墙可以允许内部的一些主机被外部访问，IDS则没有这些功能，只是监视和分析用户和系统活动。88
+
+=== Slide 88 (ppt/slides/slide89.xml) ===
+Intrusion Detection Systems (IDS)89FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 89 (ppt/slides/slide9.xml) ===
+Network Transmission MediaCableOptical fiberMicrowaveWiFiSatellite communication9FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 90 (ppt/slides/slide90.xml) ===
+Types of IDSDetection methodSignature-basedHeuristicLocationFront endInternalScopeHost-based IDS (HIDS)Network-based IDS (NIDS)CapabilityPassiveActive, also known as intrusion prevention systems (IPS)90FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 91 (ppt/slides/slide91.xml) ===
+SummaryNetworks are threatened by attacks aimed at interception, modification, fabrication, and interruptionWPA2 has many critical security advantages over WEPDoSattacks come in many flavors, but malicious ones are usually either volumetric in nature or exploit a bugNetwork encryption can be achieved using specialized tools—some for link encryption and some for end-to-end—such as VPNs, SSH, and the SSL/TLS protocolsA wide variety of firewall types exist, ranging from very basic IP-based functionality to complex application-layer logic, and both on networks and hostsThere are many flavors of IDS, each of which detects different kinds of attacks in very different parts of the network91FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 92 (ppt/slides/slide92.xml) ===
+Interruption: Loss of ServiceRouting路由Internet routing protocols are complicated, and one misconfiguration can poison the data of many routersExcessive demand过剩需求Network capacity is finite and can be exhausted; an attacker can generate enough demand to overwhelm a critical part of a networkComponent failure元件失效Component failures tend to be sporadic and unpredictable, and will cause loss of service if not planned for92FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 93 (ppt/slides/slide93.xml) ===
+Onion RoutingOnion routing prevents an eavesdropper from learning source, destination, or content of data in transit in a networkThis is particularly helpful for evading authorities, such as when users in oppressive countries want to communicate freely with the outside worldUses asymmetric cryptography, as well as layers of intermediate hosts, so thatThe intermediate host that sends the message to the ultimate destination cannot determine the original sender, andThe host that received the message from the original sender cannot determine the ultimate destination93FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 94 (ppt/slides/slide94.xml) ===
+DoSAttack: Session Hijacking94FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.an attacker is able to synchronize with a receiver whilebreaking synchronizationwith the sender and resetting the sender’s connectionThe attacker continues the TCP session while the sender thinksthe connection justbroke offReconnection maybe rejected
+
+=== Slide 95 (ppt/slides/slide95.xml) ===
+Security Information and Event Management (SIEM)95FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 96 (ppt/slides/slide96.xml) ===
+Demilitarized Zone (DMZ)96FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 97 (ppt/slides/slide97.xml) ===
+Network Address Translation (NAT)97FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
+=== Slide 98 (ppt/slides/slide98.xml) ===
+Data Loss Prevention (DLP)DLP is a set of technologies that can detect and possibly prevent attempts to send sensitive data where it is not allowed to goCan be implemented asAgent installed as an OS rootkitGuardIndicators DLP looks for:KeywordsTraffic patternsEncoding、MACDLP is best for preventing accidental incidents, as malicious users will often find ways to circumvent it98FromSecurity in Computing, Fifth Edition, by Charles P. Pfleeger, et al. (ISBN: 9780134085043). Copyright 2015 by Pearson Education, Inc. All rights reserved.
+
